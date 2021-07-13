@@ -1,0 +1,99 @@
+{
+    "name": "Media axtarış botu",
+    "description": "Telegram kanalına / qrupuna fayl göndərdiyiniz zaman bu bot verilənlər bazasında saxlayacaq, beləliklə daxil rejimində asanlıqla axtarış edə bilərsiniz.",
+    "keywords": [
+      "telegram",
+      "best",
+      "Azərbaycan",
+      "pyrogram",
+      "media",
+      "search",
+      "channel",
+      "index",
+      "inline"
+    ],
+    "website": "https://github.com/daqo7/Mediabot",
+    "repository": "https://github.com/daqo7/Mediabot",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Botunuzun token'i.",
+            "value": ""
+        },
+        "USERBOT_STRING_SESSION": {
+            "description": "User bot string session.",
+            "value": "",
+            "required": false
+        },
+        "API_ID": {
+            "description": "Bu adresdən əldə et https://my.telegram.org",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Bu adresdən əldə et https://my.telegram.org",
+            "value": ""
+        },
+        "CHANNELS": {
+            "description": "Kanalın və ya qrupun istifadəçi adı və ya İD. Birdən çox kimliyi boşluqla ayırın.",
+            "value": ""
+        },
+        "ADMINS": {
+            "description": "Administratorun istifadəçi adı və ya İD. Birdən çox Admini boşluqla ayırın.",
+            "value": ""
+        },
+        "AUTH_USERS": {
+            "description": "inline axtarışa icazə vermək üçün istifadəçi adı və ya istifadəçi id.\n istifadəsini məhdudlaşdırmaq istəmirsinizsə boş qoyun",
+            "value": "",
+            "required": false
+        },
+        "AUTH_CHANNEL": {
+            "description": "Kanalın istifadəçi adı və ya şəxsiyyəti. Bu kanala abunə olmadan istifadəçilər bot istifadə edə bilməzlər.",
+            "value": "",
+            "required": false
+        },
+        "START_MSG": {
+            "description": "start komandası üçün xoş gəlmisiniz mesajı",
+            "value": "**Salam, mən Media Axtarış botuyam ** \nBurada faylları inline rejimdə axtara bilərsiniz. Yalnız aşağıdakı düymələrə basın və axtarışa başlayın.",
+            "required": false
+        },
+        "INVITE_MSG": {
+            "description": "Kanala dəvət mesajı",
+            "value": "Xahiş edirəm bu botdan istifadə etmək üçün @daqomods qoşulun",
+            "required": false
+        },
+        "USE_CAPTION_FILTER": {
+            "description": "Botun axtarış nəticələrini yaxşılaşdırmaq üçün başlıqlardan istifadə edib etməməsi. (True False)",
+            "value": "False",
+            "required": false
+        },
+        "DATABASE_URI": {
+            "description": "mongoDB URI. Bu dəyəri https://www.mongodb.com saytından əldə edin.",
+            "value": ""
+        },
+        "DATABASE_NAME": {
+            "description": "MongoDB-də verilənlər bazasının adı.",
+            "value": ""
+        },
+        "COLLECTION_NAME": {
+            "description": "Kolleksiyaların adı. Varsayılanlar Telegram_files. Eyni database'dən istifadə edirsinizsə, hər bot üçün fərqli kolleksiya adından istifadə edin",
+            "value": "Telegram_files",
+            "required": false
+        },
+        "CACHE_TIME": {
+            "description": "Sorğunun nəticəsinin serverdə önbelleğe alına biləcəyi saniyələr içində maksimum vaxt",
+            "value": "300",
+            "required": false
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
